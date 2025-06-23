@@ -1,86 +1,26 @@
-
-<html manifest="mcd.cache">
-    
-<head>
-    <title>Auto GoldHEN MCDMUSIK</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Liberar PS4 sin USB</title>
     <style>
-        body 
-        {
-            background-image: url("host.jpg");
-            height: 80%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .loader 
-        {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin: -75px 0 0 -75px;
-            border: 10px solid #1f1e1e;
-            border-radius: 50%;
-            border-top: 10px solid #d40606;
-            border-left: 10px solid #d40606;
-            width: 120px;
-            height: 120px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin 
-        {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .info 
-        {
-            overflow: hidden;
-            position: fixed;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-
-            font-size: 45px;
-            font-family: sans-serif;
-            color: #d40606;
-
-            transform: translate(-50%, -50%);
-        }
-
-        .j {
-            font-size: 15px;
-            color: #d40606;
-        }
+      @font-face {
+        font-family: "logging";
+        src: url("./fonts/LiberationMono-Regular.ttf");
+      }
+      #console {
+        font-family: "logging";
+      }
+      body {
+        background-image: url("host.jpg") !important;
+        background-size: 100% auto;
+        color: #fff !important;
+      }
     </style>
-     
-     <script>
-        window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Cache de host iniciado!!";};
-        window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
-        window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Cache almacenado exitosamente!!";setTimeout(function(){document.getElementById("progress").innerHTML="Apaga el Internet & Abre de nuevo el navegador!!"; }, 1500);};
-        window.applicationCache.onnoupdate=function(){setTimeout(webkitExploit,500);};
-	    window.applicationCache.onerror=function(){setTimeout(webkitExploit,500);};
-
-        function allset() 
-        {
-            document.getElementById("loader").style.display = "none";
-            document.getElementById("allset").style.display = "block";
-        }
-    </script>
-    <script src="js/exploit.js"></script>
-</head>
-
-<body>
-    <h1 id="progress" style="font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:yellow;"></h1><br>
-    <div id="loader" class="loader"></div>
-    <div id="allset" class="info" style="display:none;">Liberacion completada. Cierra el Navegador!</div>
-</body>
-
+  </head>
+  <body>
+    <h1 align="center">PSFree 9.00: Creado por Miguel Antonio Castillo<br />
+    ver <a href="./ayuda.html" data-jslicense="1">licencia del código JavaScript</a> information.<br />
+    <pre id="console"></pre></h1>
+  </body>
+  <script type="module" src="./alert.mjs"></script>
 </html>
